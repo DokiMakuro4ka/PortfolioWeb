@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Даниил — DevOps & Python</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #0d0d0d;
+            color: #e0e0e0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: #9b5de5;
+            text-decoration: none;
+        }
+
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        header h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: #9b5de5;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            max-width: 600px;
+        }
+
+        .btn {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #9b5de5;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #7a3ed0;
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+            border-bottom: 2px solid #9b5de5;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .about, .experience, .projects, .skills, .contacts {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .experience-item, .project-item {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background-color: #2a2a2a;
+            padding: 10px 15px;
+            border-radius: 8px;
+        }
+
+        .contact-links a {
+            margin-right: 15px;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #888;
+        }
+
+        @media(max-width: 600px){
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <header>
+        <h1>Даниил</h1>
+        <h2>DevOps & Python энтузиаст</h2>
+        <p>Люблю собирать серверы, автоматизировать CI/CD и создавать интерактивные приложения. Создаю проекты от идеи до реализации, даже если это первый опыт!</p>
+        <a href="#projects" class="btn">Посмотреть проекты</a>
+        <a href="#contacts" class="btn">Связаться</a>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+        <h3>О себе</h3>
+        <div class="about">
+            <p>Я занимаюсь IT с колледжа и уже 3 года развиваюсь как DevOps и Python разработчик. С детства увлечён компьютерными сетями и технологиями, люблю разбираться, как всё работает «под капотом».</p>
+            <p><strong>Сильные стороны:</strong> системное мышление, спокойный, инициативный, лидер.</p>
+            <p><strong>Личное:</strong> в свободное время собираю кубик Рубика, гуляю и играю в компьютерные игры. Мои интересы помогают мне находить баланс между саморазвитием и отдыхом.</p>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+        <h3>Опыт работы</h3>
+
+        <div class="experience">
+
+            <div class="experience-item">
+                <h4>IPDROM — Инженер ПК</h4>
+                <p><em>Август 2025 — настоящее время</em></p>
+
+                <ul>
+                    <li>Сборка и обслуживание компьютерных систем</li>
+                    <li>Настройка BIOS / UEFI</li>
+                    <li>Установка и настройка операционных систем</li>
+                    <li>Диагностика и тестирование оборудования</li>
+                    <li>Поиск и устранение технических неисправностей</li>
+                    <li>Настройка пользовательских рабочих мест</li>
+                </ul>
+            </div>
+
+
+            <div class="experience-item">
+                <h4>Development Experience</h4>
+
+                <p>
+                    Развиваюсь в направлении Python разработки и DevOps.
+                    Создаю собственные проекты, изучаю автоматизацию,
+                    серверную инфраструктуру и разработку приложений.
+                </p>
+
+                <ul>
+                    <li>Решение алгоритмических задач на C++</li>
+                    <li>Работа с базовыми структурами данных и алгоритмами</li>
+                    <li>Разработка консольных приложений</li>
+                    <li>Работа с логикой программ, вводом/выводом и обработкой данных</li>
+                </ul>
+            </div>
+
+
+            <div class="experience-item">
+                <h4>GitHub Projects</h4>
+
+                <p>
+                    Практический опыт через разработку собственных проектов:
+                </p>
+
+                <ul>
+                    <li>Backend на Python / Flask</li>
+                    <li>Работа с PostgreSQL</li>
+                    <li>Telegram Bots и Mini Apps</li>
+                    <li>Docker и CI/CD автоматизация</li>
+                    <li>Развёртывание проектов на VPS</li>
+                </ul>
+
+                <p>
+                    GitHub:
+                    <a href="https://github.com/DokiMakuro4ka" target="_blank">
+                        DokiMakuro4ka
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h3>Проекты</h3>
+
+        <div class="projects">
+
+
+            <!-- Logistics -->
+            <div class="project-item">
+
+                <div class="project-image">
+                    <img src="images/logistics.gif" alt="Логистический сайт">
+                </div>
+
+                <div class="project-content">
+
+                    <h4>Логистический веб-сайт</h4>
+
+                    <p>
+                        Веб-приложение для покупателей и администраторов.
+                        Реализована система заказов, корзина и управление товарами.
+                    </p>
+
+                    <ul>
+                        <li>Корзина товаров</li>
+                        <li>Создание и обработка заказов</li>
+                        <li>Статусы заказов</li>
+                        <li>Админ-панель</li>
+                    </ul>
+
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>PostgreSQL</span>
+                    </div>
+
+
+                    <a href="#" class="project-btn">
+                        GitHub →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Telegram RPG -->
+            <div class="project-item">
+
+
+                <div class="project-image">
+                    <img src="images/barabulka.png" alt="Telegram RPG">
+                </div>
+
+
+                <div class="project-content">
+
+                    <h4>Telegram RPG Bot — Barabulka</h4>
+
+                    <p>
+                        Игровой Telegram-бот с backend логикой
+                        и Mini App интерфейсом.
+                    </p>
+
+
+                    <ul>
+                        <li>Игровая механика</li>
+                        <li>Работа с базой данных</li>
+                        <li>Telegram Mini App</li>
+                    </ul>
+
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>PostgreSQL</span>
+                        <span>Telegram API</span>
+                    </div>
+
+
+                    <a href="#" class="project-btn">
+                        GitHub →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- AI Bot -->
+            <div class="project-item">
+
+
+                <div class="project-image">
+                    <img src="images/ai.gif" alt="AI Bot">
+                </div>
+
+
+                <div class="project-content">
+
+                    <h4>Telegram AI Assistant</h4>
+
+                    <p>
+                        Ассистент на основе API,
+                        интегрированный в Telegram.
+                    </p>
+
+
+                    <ul>
+                        <li>Работа с API</li>
+                        <li>Обработка сообщений</li>
+                        <li>Backend логика</li>
+                    </ul>
+
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>API</span>
+                    </div>
+
+
+                    <a href="#" class="project-btn">
+                        GitHub →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+
+            <!-- Tic Tac Toe -->
+            <div class="project-item">
+
+
+                <div class="project-image">
+                    <img src="images/tic-tac-toe.gif" alt="Tic Tac Toe">
+                </div>
+
+
+                <div class="project-content">
+
+                    <h4>Console Tic Tac Toe</h4>
+
+                    <p>
+                        Консольная игра с собственной логикой
+                        и обработкой координат.
+                    </p>
+
+
+                    <ul>
+                        <li>Игровой цикл</li>
+                        <li>Проверка победы</li>
+                        <li>Работа с вводом</li>
+                    </ul>
+
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Logic</span>
+                    </div>
+
+
+                    <a href="#" class="project-btn">
+                        GitHub →
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h3>Навыки</h3>
+        <div class="skills">
+            <div class="skills-list">
+                <div class="skill">Python</div>
+                <div class="skill">Flask</div>
+                <div class="skill">C++</div>
+                <div class="skill">C#</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JS</div>
+                <div class="skill">Docker</div>
+                <div class="skill">Git</div>
+                <div class="skill">Linux</div>
+                <div class="skill">CI/CD</div>
+            </div>
+            <div class="skills-list">
+                <div class="skill">Коммуникация</div>
+                <div class="skill">Ответственность</div>
+                <div class="skill">Адаптивность</div>
+                <div class="skill">Leadership</div>
+                <div class="skill">Teamwork</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacts -->
+    <section id="contacts">
+        <h3>Контакты</h3>
+        <div class="contacts">
+            <p>Готов обсудить новые проекты и интересные идеи. Свяжись со мной любым удобным способом!</p>
+            <div class="contact-links">
+                <a href="https://t.me/NomikLover" target="_blank">Telegram</a>
+                <a href="https://discord.com/users/713836466106663003" target="_blank">Discord</a>
+                <a href="https://github.com/DokiMakuro4ka" target="_blank">GitHub</a>
+                <a href="mailto:brumis01@mail.ru">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Даниил. Все права защищены.
+    </footer>
+
+</body>
+</html>
