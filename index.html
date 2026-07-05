@@ -14,12 +14,82 @@
             font-family: 'Inter', sans-serif;
         }
 
+        body::before{
+            content:"";
+            position:fixed;
+            inset:0;
+            background:url("../images/noise.png");
+            opacity:.03;
+            pointer-events:none;
+            z-index:-1;
+        }
+
+        body::after{
+            content:"";
+            position:fixed;
+            left:50%;
+            top:-350px;
+            transform:translateX(-50%);
+            width:900px;
+            height:900px;
+            border-radius:50%;
+            background:
+                radial-gradient(
+                    rgba(155,93,229,.12),
+                    transparent 70%
+                );
+            pointer-events:none;
+            z-index:-2;
+            animation:backgroundFloat 16s ease-in-out infinite;
+        }
+
+        @keyframes backgroundFloat{
+            0%{
+                transform:
+                translateX(-50%)
+                translateY(0);
+            }
+
+            50%{
+                transform:
+                translateX(-48%)
+                translateY(25px);
+            }
+
+            100%{
+                transform:
+                translateX(-50%)
+                translateY(0);
+            }
+        }
+        
         body {
+            background:
+                radial-gradient(
+                    circle at 15% 20%,
+                    rgba(155,93,229,.12),
+                    transparent 32%
+                ),
+
+                radial-gradient(
+                    circle at 85% 75%,
+                    rgba(0,170,255,.08),
+                    transparent 28%
+                ),
+
+                radial-gradient(
+                    circle at 50% 100%,
+                    rgba(255,255,255,.03),
+                    transparent 45%
+                ),
+
+                #0d0d0d;
             background-color: #0d0d0d;
-            color: #e0e0e0;
+            color: #eaeaea;
             line-height: 1.6;
             scroll-behavior: smooth;
         }
+    
 
         a {
             color: #9b5de5;
