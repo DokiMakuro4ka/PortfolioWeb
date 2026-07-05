@@ -118,12 +118,29 @@
             color: #888;
         }
 
+        .project-item{
+            display:grid;
+            grid-template-columns:1fr 480px;
+            gap:40px;
+            align-items:center;
+            background:#171717;
+            padding:30px;
+            border-radius:18px;
+            border:1px solid #262626;
+            transition:.25s;
+        }
+
+        .project-item:hover{
+            transform:translateY(-6px);
+            border-color:#9b5de5;
+        }
+
         .project-image {
-            width: 100%;
-            height: 280px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
             overflow: hidden;
             border-radius: 12px;
-            margin-bottom: 20px;
         }
 
         .project-image img {
@@ -131,6 +148,57 @@
             height: 100%;
             object-fit: cover;
             display: block;
+        }
+
+        .project-btn {
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #202020;
+            color: #fff;
+            border: 1px solid #303030;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all .25s ease;
+        }
+
+        .project-btn:hover {
+            background: #9b5de5;
+            border-color: #9b5de5;
+            transform: translateY(-2px);
+        }
+
+        .project-btn .arrow {
+            transition: transform .25s ease;
+        }
+
+        .arrow_txt {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-btn:hover .arrow {
+            transform: translateX(5px);
+        }
+
+        .tags{
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px;
+            margin:20px 0;
+        }
+
+        .tags span{
+            padding:8px 14px;
+            background:#222;
+            border-radius:50px;
+            color:#c9a4ff;
+            font-size:14px;
         }
 
         @media(max-width: 600px){
@@ -159,7 +227,7 @@
         <h3>О себе</h3>
         <div class="about">
             <p>Я занимаюсь IT с колледжа и уже 3 года развиваюсь как DevOps и Python разработчик. С детства увлечён компьютерными сетями и технологиями, люблю разбираться, как всё работает «под капотом».</p>
-            <p><strong>Сильные стороны:</strong> системное мышление, спокойный, инициативный, лидер.</p>
+            <p><strong>Сильные стороны:</strong> системное мышление, спокойный, инициативный.</p>
             <p><strong>Личное:</strong> в свободное время собираю кубик Рубика, гуляю и играю в компьютерные игры. Мои интересы помогают мне находить баланс между саморазвитием и отдыхом.</p>
         </div>
     </section>
@@ -242,16 +310,28 @@
                         <span>Flask</span>
                         <span>PostgreSQL</span>
                     </div>
-                    <a href="https://github.com/DokiMakuro4ka/Coursework" class="project-btn">
-                        GitHub →
+                    <a
+                        href="https://github.com/DokiMakuro4ka/Coursework"
+                        target="_blank"
+                        class="project-btn"
+                    >   
+                    <svg
+                        class="github-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.93c.58.1.79-.25.79-.56v-2.03c-3.25.71-3.94-1.39-3.94-1.39-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.39.97.1-.76.41-1.27.74-1.56-2.6-.3-5.34-1.3-5.34-5.78 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2.63 1.65.23 2.87.11 3.17.75.82 1.2 1.87 1.2 3.15 0 4.49-2.75 5.47-5.37 5.77.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                    </svg>
+                        <div class="arrow_txt">
+                            <span class="txt">View on GitHub</span>
+                            <span class="arrow">→</span>
+                        </div>
                     </a>
                 </div>
             </div>
             <!-- Telegram RPG -->
             <div class="project-item">
-                <div class="project-image">
-                    <img src="images/barabulka.gif" alt="Telegram RPG">
-                </div>
                 <div class="project-content">
                     <h4>Telegram RPG Bot — Barabulka</h4>
                     <p>
@@ -268,9 +348,27 @@
                         <span>PostgreSQL</span>
                         <span>Telegram API</span>
                     </div>
-                    <a href="https://github.com/DokiMakuro4ka/Barabulka" class="project-btn">
-                        GitHub →
+                    <a
+                        href="https://github.com/DokiMakuro4ka/Barabulka"
+                        target="_blank"
+                        class="project-btn"
+                    >
+                    <svg
+                        class="github-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.93c.58.1.79-.25.79-.56v-2.03c-3.25.71-3.94-1.39-3.94-1.39-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.39.97.1-.76.41-1.27.74-1.56-2.6-.3-5.34-1.3-5.34-5.78 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2.63 1.65.23 2.87.11 3.17.75.82 1.2 1.87 1.2 3.15 0 4.49-2.75 5.47-5.37 5.77.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                    </svg>
+                        <div class="arrow_txt">
+                            <span class="txt">View on GitHub</span>
+                            <span class="arrow">→</span>
+                        </div>
                     </a>
+                </div>
+                <div class="project-image">
+                    <img src="images/barabulka.gif" alt="Telegram RPG">
                 </div>
             </div>
             <!-- AI Bot -->
@@ -294,16 +392,28 @@
                         <span>Flask</span>
                         <span>API</span>
                     </div>
-                    <a href="https://github.com/DokiMakuro4ka/TgBotAiSeller" class="project-btn">
-                        GitHub →
+                    <a
+                        href="https://github.com/DokiMakuro4ka/TgBotAiSeller"
+                        target="_blank"
+                        class="project-btn"
+                    >
+                    <svg
+                        class="github-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.93c.58.1.79-.25.79-.56v-2.03c-3.25.71-3.94-1.39-3.94-1.39-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.39.97.1-.76.41-1.27.74-1.56-2.6-.3-5.34-1.3-5.34-5.78 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2.63 1.65.23 2.87.11 3.17.75.82 1.2 1.87 1.2 3.15 0 4.49-2.75 5.47-5.37 5.77.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                    </svg>
+                        <div class="arrow_txt">
+                            <span class="txt">View on GitHub</span>
+                            <span class="arrow">→</span>
+                        </div>
                     </a>
                 </div>
             </div>
             <!-- Tic Tac Toe -->
             <div class="project-item">
-                <div class="project-image">
-                    <img src="images/tic-tac-toe.gif" alt="Tic Tac Toe">
-                </div>
                 <div class="project-content">
                     <h4>Console Tic Tac Toe</h4>
                     <p>
@@ -319,9 +429,27 @@
                         <span>Python</span>
                         <span>Logic</span>
                     </div>
-                    <a href="https://github.com/DokiMakuro4ka/KrestikiNoliki" class="project-btn">
-                        GitHub →
+                    <a
+                        href="https://github.com/DokiMakuro4ka/KrestikiNoliki"
+                        target="_blank"
+                        class="project-btn"
+                    >
+                    <svg
+                        class="github-icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                    >
+                        <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 008 10.93c.58.1.79-.25.79-.56v-2.03c-3.25.71-3.94-1.39-3.94-1.39-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.39.97.1-.76.41-1.27.74-1.56-2.6-.3-5.34-1.3-5.34-5.78 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.52.11-3.17 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2.63 1.65.23 2.87.11 3.17.75.82 1.2 1.87 1.2 3.15 0 4.49-2.75 5.47-5.37 5.77.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0023.5 12C23.5 5.65 18.35.5 12 .5z"/>
+                    </svg>
+                        <div class="arrow_txt">
+                            <span class="txt">View on GitHub</span>
+                            <span class="arrow">→</span>
+                        </div>
                     </a>
+                </div>
+                <div class="project-image">
+                    <img src="images/tic-tac-toe.gif" alt="Tic Tac Toe">
                 </div>
             </div>
         </div>
