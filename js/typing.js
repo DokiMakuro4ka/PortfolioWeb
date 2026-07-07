@@ -1,13 +1,13 @@
 const text = "DevOps & Python Developer";
 const element = document.getElementById("typing");
 let index = 0;
-function type(){
-    if(index < text.length){
+function typeHeading() {
+    if (index < text.length) {
         element.textContent += text[index];
         index++;
-        setTimeout(type,70);
+        setTimeout(typeHeading, 70);
     }
 }
-window.addEventListener("load",()=>{
-    setTimeout(type,3000);
+window.addEventListener("load", () => {
+    setTimeout(typeHeading, 3000);
 });
