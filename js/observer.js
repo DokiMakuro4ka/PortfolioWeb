@@ -2,6 +2,7 @@ const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add("active");
+            updateTerminal(entry.target.id);
         }
     });
 }, {
@@ -12,8 +13,7 @@ document.querySelectorAll(".reveal").forEach(section => {
 });
 
 
-const cards = document.querySelectorAll(".project-item");
-const cardObserver = new IntersectionObserver((entries) => {
+const cardObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             cards.forEach((card, index) => {
@@ -21,6 +21,7 @@ const cardObserver = new IntersectionObserver((entries) => {
                     card.classList.add("show");
                 }, index * 150);
             });
+            observer.unobserve(entry.target);
         }
     });
 });
